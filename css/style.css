@@ -1,0 +1,73 @@
+.btn {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  display: inline-block;
+  background-color: #cd3737;
+  font-family: 'Lato', sans-serif; }
+  .btn.btn-large {
+    width: 260px;
+    height: 57px; }
+
+.full_page .welcome_section {
+  background: url("../images/main_bg.jpg") center top;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 889px;
+  text-align: center; }
+  .full_page .welcome_section p {
+    font-family: 'Open Sans', sans-serif; }
+    .full_page .welcome_section p.head {
+      color: #999999;
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 80px;
+      padding-top: 320px; }
+      .full_page .welcome_section p.head span {
+        color: #ffffff;
+        font-weight: 700; }
+    .full_page .welcome_section p.text {
+      color: rgba(255, 255, 255, 0.74902);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 70px; }
+      .full_page .welcome_section p.text span {
+        font-weight: 700; }
+  .full_page .welcome_section .btn-round {
+    display: inline-block;
+    width: 50px;
+    height: 50px; }
+.full_page .why_us_section {
+  padding: 100px 0px; }
+  .full_page .why_us_section .head h1 {
+    color: #2a2a2a;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+    font-family: 'Lato', sans-serif; }
+    .full_page .why_us_section .head h1 span {
+      font-weight: 700; }
+  .full_page .why_us_section .head .lines {
+    width: 215px;
+    height: 12px;
+    margin: 27px auto 0;
+    position: relative; }
+    .full_page .why_us_section .head .lines .line {
+      background-color: #2a2a2a;
+      width: 151px;
+      height: 1px;
+      position: absolute; }
+      .full_page .why_us_section .head .lines .line.first {
+        left: 0;
+        top: 0; }
+      .full_page .why_us_section .head .lines .line.second {
+        right: 0;
+        bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */
