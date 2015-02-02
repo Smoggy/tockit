@@ -194,18 +194,22 @@ header {
   background: url("../images/studies.jpg") center bottom;
   background-size: cover;
   position: relative;
-  padding: 80px 0; }
+  padding: 80px 0;
+  overflow: hidden; }
   .full_page .studies_section .container {
     width: 1139px;
     margin: 60px auto 0;
     position: relative; }
     .full_page .studies_section .container .top_line {
       background-color: rgba(42, 42, 42, 0.5);
-      width: 879px;
+      width: 0;
       height: 1px;
       position: absolute;
       top: 0;
-      margin-left: 129px; }
+      margin-left: 129px;
+      left: 50%;
+      -webkit-transition: width 0.7s, left 0.7s;
+      transition: width 0.7s, left 0.7s; }
     .full_page .studies_section .container .item {
       display: inline-block;
       width: 260px;
@@ -219,14 +223,20 @@ header {
         font-weight: 400;
         line-height: 26px;
         font-family: 'Lato', sans-serif;
-        padding-bottom: 25px; }
+        padding-bottom: 25px;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s; }
       .full_page .studies_section .container .item p {
         color: rgba(42, 42, 42, 0.65098);
         font-size: 15px;
         font-style: italic;
         line-height: 22px;
         font-family: 'Lato', sans-serif;
-        padding-bottom: 30px; }
+        padding-bottom: 30px;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s; }
       .full_page .studies_section .container .item .item_lines {
         height: 43px;
         width: 73px;
@@ -236,23 +246,30 @@ header {
           position: absolute;
           top: 0;
           width: 1px;
-          height: 31px;
+          height: 0px;
           background-color: rgba(42, 42, 42, 0.7);
-          margin-left: 36px; }
+          margin-left: 36px;
+          -webkit-transition: height 0.7s;
+          transition: height 0.7s; }
         .full_page .studies_section .container .item .item_lines .horizontal_1 {
-          width: 45px;
+          width: 0;
           height: 1px;
           background-color: rgba(42, 42, 42, 0.7);
           position: absolute;
           top: 31px;
-          top: 31px;
-          margin-left: 14px; }
+          margin-left: 14px;
+          -webkit-transition: width 0.7s, left 0.7s;
+          transition: width 0.7s, left 0.7s;
+          left: 50%; }
         .full_page .studies_section .container .item .item_lines .horizontal_2 {
           background-color: rgba(42, 42, 42, 0.7);
-          width: 73px;
+          width: 0;
           height: 1px;
           position: absolute;
-          bottom: 0; }
+          bottom: 0;
+          -webkit-transition: width 0.7s, left 0.7s;
+          transition: width 0.7s, left 0.7s;
+          left: 50%; }
       .full_page .studies_section .container .item .image {
         width: 155px;
         height: 155px;
@@ -261,12 +278,23 @@ header {
         border: 4px solid black;
         text-align: center;
         line-height: 155px;
-        margin: 0 auto 38px; }
+        margin: 0 auto 38px;
+        position: relative;
+        bottom: 30px;
+        opacity: 0;
+        -webkit-transition: opacity 0.8s, bottom 0.8s;
+        transition: opacity 0.8s, bottom 0.8s; }
         .full_page .studies_section .container .item .image img {
           width: 126px;
           height: 126px;
           border-radius: 50%;
           vertical-align: middle; }
+      .full_page .studies_section .container .item .btn {
+        position: relative;
+        top: 90px;
+        opacity: 0;
+        -webkit-transition: opacity 0.4s, top 0.4s;
+        transition: opacity 0.4s, top 0.4s; }
 .full_page .portfolio_section {
   padding: 100px 0px 0px; }
   .full_page .portfolio_section .portfolio {
@@ -667,5 +695,3 @@ header {
       margin-right: 0px; }
     .full_page .footer .socials a:hover {
       color: #cd3737; }
-
-/*# sourceMappingURL=style.css.map */

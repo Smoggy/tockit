@@ -39,6 +39,50 @@ $(document).ready(function(){
 		offset: '700px'
 	});
 
+	$('.studies_section .container').waypoint(function(direction){
+		if(direction == 'down') {
+			var $element = $(this.element),
+				$topline  = $element.find('.top_line'),
+				$vertical = $element.find('.vertical'),
+				$horizontal_1 = $element.find('.horizontal_1'),
+				$horizontal_2 = $element.find('.horizontal_2'),
+				$image = $element.find('.image'),
+				$headers = $element.find('h1'),
+				$texts = $element.find('p'),
+				$btns = $element.find('.btn');
+
+
+			$topline.css({left: 0, width: 879});
+			setTimeout(function() {$vertical.css({height: 31}); }, 700);
+			setTimeout(function() {$horizontal_1.css({left: 0, width: 45}); }, 1400);
+			setTimeout(function() {$horizontal_2.css({left: 0, width: 73}); }, 1800);
+			setTimeout(function() {$image.css({bottom: 0, opacity: 1}); }, 2500);
+			setTimeout(function() {
+				var counter_1 = 0, counter_2 = 0;
+				$headers.each(function(index, value){
+					setTimeout(function(){$(value).css({opacity: 1})}, counter_1);
+					counter_1 += 200;
+				});
+
+				$($texts.get().reverse()).each(function(index, value) {
+					setTimeout(function(){$(value).css({opacity: 1})}, counter_2);
+					counter_2 += 200;
+				});
+			}, 3300);
+
+			setTimeout(function(){
+				var counter = 0;
+				$btns.each(function(index, value){
+					setTimeout(function(){$(value).css({top: 0, opacity: 1})}, counter);
+					counter += 300;
+				});
+			}, 4200);
+			this.destroy;
+		}
+	}, {
+		offset: '50%'
+	});
+
 	$('.view_more').waypoint(function(direction){
 		if(direction == 'down') {
 			var $element = $(this.element),
