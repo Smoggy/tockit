@@ -6,6 +6,17 @@
   to {
     box-shadow: 0px 0px 100px 50px;
     opacity: 0; } }
+@-webkit-keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
+@keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
+a {
+  outline: none; }
+
 .btn {
   text-decoration: none;
   color: #ffffff;
@@ -61,6 +72,58 @@
   color: white; }
 .head.white .lines .line {
   background-color: white; }
+
+.side_nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .side_nav ul li {
+    display: block;
+    width: 14px;
+    height: 15px;
+    margin: 12px;
+    position: relative; }
+    .side_nav ul li a {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      text-decoration: none; }
+      .side_nav ul li a span {
+        top: 2px;
+        left: 2px;
+        width: 6px;
+        height: 24px;
+        background: rgba(205, 55, 55, 0.2);
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+        border: 0; }
+        .side_nav ul li a span div {
+          position: absolute;
+          top: 6px;
+          color: rgba(205, 55, 55, 0.6);
+          font-size: 12px;
+          white-space: nowrap;
+          max-width: 220px;
+          overflow: hidden;
+          display: block;
+          width: auto;
+          right: 20px;
+          opacity: 0;
+          -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s; }
+        .side_nav ul li a span:hover div {
+          opacity: 1; }
+      .side_nav ul li a.active span {
+        background: #cd3737; }
 
 header {
   position: fixed;
@@ -154,7 +217,21 @@ header {
     margin-left: auto;
     margin-right: auto;
     left: 0;
-    right: 0; }
+    right: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent; }
+    .full_page .welcome_section .btn-round:hover, .full_page .welcome_section .btn-round:focus, .full_page .welcome_section .btn-round:active {
+      -webkit-animation-name: pulse-grow;
+      animation-name: pulse-grow;
+      -webkit-animation-duration: 0.4s;
+      animation-duration: 0.4s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate; }
 .full_page .why_us_section {
   padding: 100px 0px; }
   .full_page .why_us_section .service_container {
@@ -188,6 +265,114 @@ header {
           background: url("../images/motion.png"); }
       .full_page .why_us_section .service_container .service.third .image {
         background: url("../images/success.png"); }
+  .full_page .why_us_section .lists_container {
+    position: relative;
+    width: 1100px;
+    height: 402px;
+    margin: 0 auto; }
+    .full_page .why_us_section .lists_container .top_line {
+      position: absolute;
+      height: 1px;
+      width: 0;
+      left: 455px;
+      background-color: #2a2a2a;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s; }
+    .full_page .why_us_section .lists_container .bottom_line {
+      position: absolute;
+      height: 1px;
+      width: 0;
+      background-color: #2a2a2a;
+      left: 455px;
+      top: 124px;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s; }
+    .full_page .why_us_section .lists_container .bottom_vertical {
+      height: 0;
+      width: 1px;
+      position: absolute;
+      background-color: #2a2a2a;
+      top: 125px;
+      left: 552px;
+      -webkit-transition: height 0.7s;
+      transition: height 0.7s; }
+    .full_page .why_us_section .lists_container .separator_1 {
+      position: absolute;
+      width: 1px;
+      height: 0;
+      left: 0;
+      background-color: #2a2a2a;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s; }
+    .full_page .why_us_section .lists_container .separator_2 {
+      position: absolute;
+      width: 1px;
+      height: 0;
+      left: 455px;
+      background-color: #2a2a2a;
+      top: 62px;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s; }
+    .full_page .why_us_section .lists_container .separator_3 {
+      position: absolute;
+      width: 1px;
+      height: 0;
+      background-color: #2a2a2a;
+      right: 196px;
+      top: 124px;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s; }
+    .full_page .why_us_section .lists_container ul {
+      position: absolute; }
+      .full_page .why_us_section .lists_container ul li {
+        font-family: 'Lato';
+        color: #2a2a2a;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 16px; }
+        .full_page .why_us_section .lists_container ul li span {
+          font-weight: 700; }
+        .full_page .why_us_section .lists_container ul li i.line {
+          width: 0;
+          height: 1px;
+          display: inline-block;
+          background-color: #2a2a2a;
+          bottom: 5px;
+          position: relative;
+          margin-right: 9px; }
+        .full_page .why_us_section .lists_container ul li i.text {
+          opacity: 0;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s; }
+      .full_page .why_us_section .lists_container ul.list_1 {
+        left: 0;
+        top: 27px; }
+      .full_page .why_us_section .lists_container ul.list_2 {
+        left: 455px;
+        top: -13px; }
+        .full_page .why_us_section .lists_container ul.list_2 li {
+          left: 30px;
+          opacity: 0; }
+          .full_page .why_us_section .lists_container ul.list_2 li i.line {
+            width: 33px; }
+          .full_page .why_us_section .lists_container ul.list_2 li i.text {
+            opacity: 1; }
+      .full_page .why_us_section .lists_container ul.list_3 {
+        left: 904px;
+        top: 27px; }
+    .full_page .why_us_section .lists_container .btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      -webkit-transition: opacity 0.6s;
+      transition: opacity 0.6s; }
 .full_page .studies_section {
   height: 557px;
   width: 100%;
@@ -366,15 +551,26 @@ header {
       .full_page .portfolio_section .portfolio .portfolio_slider .slider_item .photo {
         display: inline-block;
         width: 33.33333%;
-        height: 571px;
+        height: 600px;
         overflow: hidden; }
         .full_page .portfolio_section .portfolio .portfolio_slider .slider_item .photo .small {
           width: 100%;
-          height: 292px;
+          height: 300px;
           overflow: hidden; }
         .full_page .portfolio_section .portfolio .portfolio_slider .slider_item .photo img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          filter: grayscale(1);
+          -webkit-filter: grayscale(1);
+          filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+          -webkit-transition: all 0.8s;
+          transition: all 0.8s;
+          transition: all 0.8s;
+          cursor: pointer; }
+          .full_page .portfolio_section .portfolio .portfolio_slider .slider_item .photo img:hover {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale"); }
   .full_page .portfolio_section .view_more {
     margin: 80px auto;
     text-align: center; }
@@ -469,7 +665,7 @@ header {
         background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-101366.jpg) no-repeat center center;
         background-size: cover; }
       .full_page .clients_section .quote_slider .slider_item.third {
-        background: url(http://i.ytimg.com/vi/oEKxQF5VTtA/maxresdefault.jpg) no-repeat center center;
+        background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-77085.jpg) no-repeat center top;
         background-size: cover; }
       .full_page .clients_section .quote_slider .slider_item p {
         color: rgba(255, 255, 255, 0.85098);
@@ -695,3 +891,5 @@ header {
       margin-right: 0px; }
     .full_page .footer .socials a:hover {
       color: #cd3737; }
+
+/*# sourceMappingURL=style.css.map */
